@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CarsAnalytics.ExperienceApi.Tests/CarsAnalytics.ExperienceApi.Tests.csproj" />
+  <Project Path="CarsAnalytics.ExperienceApi/CarsAnalytics.ExperienceApi.csproj" />
+</Solution>

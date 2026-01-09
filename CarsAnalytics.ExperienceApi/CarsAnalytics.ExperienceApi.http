@@ -1,0 +1,6 @@
+@CarsAnalytics.ExperienceApi_HostAddress = http://localhost:5198
+
+GET {{CarsAnalytics.ExperienceApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
