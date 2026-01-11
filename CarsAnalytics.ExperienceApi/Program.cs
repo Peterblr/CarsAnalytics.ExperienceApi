@@ -19,8 +19,15 @@ builder.Services.AddScoped<ITerritoryService, TerritoryService>();
 
 builder.Services.AddControllers();
 
-builder.Services.AddEndpointsApiExplorer(); 
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowBlazor", policy => policy.WithOrigins("https://localhost:7005")
+    .AllowAnyHeader()
+    .AllowAnyMethod());
+});
 
 var app = builder.Build();
 
@@ -38,6 +45,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors("AllowBlazor");
 
 app.MapControllers();
 
